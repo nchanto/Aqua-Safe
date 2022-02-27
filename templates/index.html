@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aqua-Safe</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="icon" href="static/images/logo_.png" type="image/icon type">
+</head>
+<style>
+
+</style>
+
+<body>
+
+    <link rel="stylesheet" href="{{url_for('static' , filename='css/mystyle.css')}}">
+
+    
+    <ul>
+        <li><a href="https://github.com/nchanto/Aqua-Safe" target="_blank">GitHub</a></li>
+        <li><a href="https://www.linkedin.com/in/nicholas-d-anto-71b404170/" target="_blank">LinkedIn</a></li>
+    </ul>
+    <div class="hero-image">
+        <div class="hero-text">
+            <p id="hero-text-header">Aqua-Safe</p>
+            <p id="hero-text-info">Know the safety of Water.
+            </p>
+        </div>
+    </div>
+
+    <div id="input-section">
+        <form method="POST" action="{{ url_for('predict')}}" method="POST"
+        style="text-align: left; margin-left: 90px;">
+            <div style="margin-top: 40px;font-size: 30px; color: #111; font-weight: 500;">
+                Input the following parameters to predict <br>
+                if the water is safe:
+            </div>
+            <div style="margin-top: 40px;">
+                <label for="fname" style="margin-top: 50px;">pH Level</label><br>
+                <input type="number" name="ph" placeholder="Range 0 to 14" step=".01"
+                style="width: 200px; height: 30px; border-radius: 2px;  border: 1px solid rgba(0,0,0,0.5);"><br>
+            </div>
+            <div style="margin-top: 40px;">
+                <label for="lname">Trihalomethanes</label><br>
+                <input type="number" name="trihalomethanes" placeholder="Range 0 to 130" step=".01"
+                style="width: 200px; height: 30px; border-radius: 2px;  border: 1px solid rgba(0,0,0,0.5);"><br>
+            </div>
+            <div style="margin-top: 40px;">
+                <label for="lname">Solids</label><br>
+                <input type="number" name="solids" placeholder="Range 320 to 62000" step=".01"
+                style="width: 200px; height: 30px; border-radius: 2px;  border: 1px solid rgba(0,0,0,0.5);"><br>
+            </div>
+            <div style="margin-top: 40px;">
+                <label for="lname">Sulfate</label><br>
+                <input type="number" name="sulfate" placeholder="Range 120 to 480" step=".01"
+                style="width: 200px; height: 30px; border-radius: 2px;  border: 1px solid rgba(0,0,0,0.5);"><br>
+            </div>
+            <div style="margin-top: 40px;">
+                <label for="lname">Organic Carbon</label><br>
+                <input type="number" name="organic_carbon" placeholder="Range 0 to 30" step=".01"
+                style="width: 200px; height: 30px; border-radius: 2px;  border: 1px solid rgba(0,0,0,0.5);"><br>
+            </div>
+            <div style="margin-top: 40px;">
+                <label for="lname">Hardness</label><br>
+                <input type="number" name="hardness" placeholder="Range 40 to 330" step=".01"
+                style="width: 200px; height: 30px; border-radius: 2px;  border: 1px solid rgba(0,0,0,0.5);"><br>
+            </div>
+
+            <input class="button" type="submit" value="Predict">
+            
+        </form>
+    </div>
+
+    <div>
+        <img src="static\images\drops.png" style="position: absolute;
+        left: 3%; top: 70%;height: 110px; opacity: 0.4;">
+        <img src="static\images\drops.png" style="position: absolute;
+        right: 5%; top: 30%;height: 170px; opacity: 0.5;">   
+        <img id="water-drop-big" src="static\images\drops.png" style="position: absolute;
+        right: 5%; top: 170%;height: 250px; opacity: 0.4;">     
+    </div>
+
+    <footer class="footer"> 
+            <p style="font-size:30px; color: white; text-align: center; 
+            position: relative; top: 8px;">Aqua-Safe</p>
+            <div style="color:cadetblue; text-align: center;">
+            <p>Made by Nicholas</p>
+            <p>Project idea inspired by my Mom</p>
+            <p>© Copyright 2022 Nicholas D'Anto</p><br>          
+            </div>
+    </footer>
+</body>
+
+</html>

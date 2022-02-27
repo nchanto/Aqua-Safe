@@ -1,0 +1,12 @@
+.background{
+    background: linear-gradient(to right, rgba(6, 199, 38, 0.733), rgb(65, 208, 248));
+}
+.safe-position{
+    font-size: 75px;
+    position: absolute;
+    top:25%;
+    left:50%;
+    transform: translate(-50%,50%);
+    font-weight: 500;
+    color: rgba(5, 5, 5, 0.76);
+}
